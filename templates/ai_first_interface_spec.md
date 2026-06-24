@@ -1,6 +1,6 @@
 # Template: AI-First SaaS Interface Spec
 
-Use this template to produce a product-grade spec for an AI-native SaaS interface.
+Use this template to produce a product-grade spec for an AI-native SaaS interface, including onboarding and activation.
 
 ## 1. Product frame
 
@@ -10,6 +10,7 @@ Use this template to produce a product-grade spec for an AI-native SaaS interfac
 **Core jobs-to-be-done:**  
 **AI-first thesis:**  
 **What is not AI-first / should remain conventional UI:**  
+**First verified outcome target:**  
 
 ## 2. Domain object model
 
@@ -25,7 +26,30 @@ Map the user’s work as a graph, not a page sequence.
 |---|---|---|---|---|---|---|
 | | | | | | | |
 
-## 4. Human-AI responsibility map
+## 4. Onboarding and activation model
+
+Use this section when the interface includes new-user onboarding, major workflow onboarding, enterprise rollout, or adoption improvement.
+
+**Onboarding thesis:**  
+**First verified outcome:**  
+**Minimum viable context required:**  
+**Capability contract summary:**  
+**First-run artifact:**  
+**Verification moment:**  
+**Correction / repair rehearsal:**  
+**Safe next delegation:**  
+
+| Onboarding stage | User question | Surface / component | AI behavior | Visual proof | Success metric |
+|---|---|---|---|---|---|
+| Promise | Is this for me? | Outcome Picker | Maps role to use cases | Artifact preview | Outcome selected |
+| Context | What does it need? | Connector cards / context chips | Explains required context | Data scope | Minimum context provided |
+| Capability | What can it do? | Capability Contract | States limits and controls | Can/cannot/change/remember | Boundaries understood |
+| First run | Can it help now? | Plan Preview | Proposes steps | Plan + sources + risk | Task started |
+| Verification | Can I trust this? | Source Drawer / Diff | Explains evidence | Editable artifact | Verified output |
+| Repair | What if it is wrong? | Correction controls | Revises and learns scope | Before/after | Correction completed |
+| Delegation | What can I automate? | Autonomy ladder | Suggests bounded automation | Policy + approvals | Safe workflow saved |
+
+## 5. Human-AI responsibility map
 
 | Task | Human owns | AI owns | Autonomy level | Evidence needed | Approval rule | Recovery |
 |---|---|---|---|---|---|---|
@@ -40,11 +64,12 @@ Autonomy levels:
 6. Execute within policy
 7. Monitor and escalate
 
-## 5. Modality map
+## 6. Modality map
 
 | Workflow stage | Best modality | Why | Visual surface | AI behavior | User controls |
 |---|---|---|---|---|---|
 | Discover | | | | | |
+| Onboard | | | | | |
 | Decide | | | | | |
 | Create | | | | | |
 | Review | | | | | |
@@ -52,15 +77,22 @@ Autonomy levels:
 | Monitor | | | | | |
 | Recover | | | | | |
 
-## 6. Interface architecture
+## 7. Interface architecture
 
-Define the main surfaces:
+Define the main surfaces.
 
 ### Command center
 Purpose:  
 Shows:  
 AI role:  
 User actions:  
+
+### Onboarding / first mission launcher
+Outcome options:  
+Role or maturity routing:  
+Sample data / sandbox:  
+First verified outcome:  
+Skip / resume behavior:  
 
 ### Intent composer
 Inputs:  
@@ -105,7 +137,7 @@ Policies:
 Audit logs:  
 Team instructions:  
 
-## 7. Key screen blueprints
+## 8. Key screen blueprints
 
 Repeat for each screen.
 
@@ -118,6 +150,7 @@ Repeat for each screen.
 **Layout regions:**  
 **Primary components:**  
 **Empty state:**  
+**Onboarding / first-use state:**  
 **Loading / interpreting state:**  
 **Agent-working state:**  
 **Review state:**  
@@ -125,7 +158,7 @@ Repeat for each screen.
 **Accessibility notes:**  
 **Telemetry:**  
 
-## 8. Key interaction flows
+## 9. Key interaction flows
 
 Repeat for each flow.
 
@@ -143,7 +176,7 @@ Repeat for each flow.
 10. Replay / audit log:  
 11. Repair / rollback:  
 
-## 9. Failure and repair model
+## 10. Failure and repair model
 
 | Failure | Detection | User-facing state | Recovery path | Audit artifact | Metric |
 |---|---|---|---|---|---|
@@ -157,11 +190,21 @@ Repeat for each flow.
 | Policy conflict | | | | | |
 | Prompt injection | | | | | |
 | Bad autonomous action | | | | | |
+| Onboarding overtrust | | | | | |
+| Onboarding underuse | | | | | |
 
-## 10. Component inventory
+## 11. Component inventory
 
 | Component | Purpose | States | Inputs | Outputs | Accessibility requirements |
 |---|---|---|---|---|---|
+| Outcome Picker | | | | | |
+| AI Capability Contract | | | | | |
+| Minimum Viable Context Form | | | | | |
+| Guided First Outcome | | | | | |
+| Evidence Inspection Drill | | | | | |
+| Diff Review Drill | | | | | |
+| Repair Practice Card | | | | | |
+| Autonomy Ladder Reveal | | | | | |
 | Intent Composer | | | | | |
 | Plan Preview Card | | | | | |
 | Agent Activity Rail | | | | | |
@@ -170,20 +213,24 @@ Repeat for each flow.
 | Approval Gate | | | | | |
 | Memory Inspector | | | | | |
 
-## 11. Metrics
+## 12. Metrics
 
 | Metric | Definition | Target | Instrumentation |
 |---|---|---|---|
-| Time to verified outcome | | | |
+| Time to first verified outcome | | | |
+| First-session useful artifact rate | | | |
+| Source/diff inspection before first approval | | | |
+| First repair success rate | | | |
 | Turns to useful artifact | | | |
 | Repair success rate | | | |
-| Source inspection rate | | | |
 | False autonomous action rate | | | |
 | Human review time | | | |
+| First bounded automation configured | | | |
+| Second-session return after first artifact | | | |
 | Accessibility task success | | | |
 
-## 12. Open assumptions and risks
+## 13. Open assumptions and risks
 
 - Assumption:  
 - Risk:  
-- Validation needed:
+- Validation needed:  
